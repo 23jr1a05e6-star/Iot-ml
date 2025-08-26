@@ -3,7 +3,7 @@ from main import generateAI
 import pickle
 
 generateAI()
-classifier=pickle.load(open('model.pkl','rb'))
+classifier=pickle.load('model.pkl','rb'))
 
 app=Flask(_name_)
 
@@ -21,4 +21,5 @@ def predict():
     return (result)
 
 if(_name=="main_"):
+
     app.run(host='0.0.0.0',port=5000,debug=True)
